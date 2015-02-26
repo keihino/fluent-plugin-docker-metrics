@@ -2,7 +2,7 @@ module Fluent
   class DockerMetricsInput < Input
     Plugin.register_input('docker_metrics', self)
 
-    config_param :cgroup_path, :string, :default => '/sys/fs/cgroup'
+    config_param :cgroup_path, :string, :default => '/cgroup'
     config_param :stats_interval, :time, :default => 60 # every minute
     config_param :tag_prefix, :string, :default => "docker"
     config_param :container_ids, :array, :default => nil # mainly for testing
